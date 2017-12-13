@@ -9,7 +9,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
-RUN apt-get -y update && apt-get install -y python-pip libcurl4-openssl-dev gcc libssl-dev curl gunicorn git
+RUN apt-get -y update && apt-get install -y python-pip libcurl4-openssl-dev gcc libssl-dev curl gunicorn git pandoc
 
 RUN pip install pip --upgrade
 #RUN pip install setuptools --upgrade \
