@@ -6,7 +6,7 @@ ENV LANG en_US.utf8
 
 RUN apt-get clean && \
     apt-get update -y && \
-    apt-get install -y -y python-pip libcurl4-openssl-dev gcc libssl-dev curl gunicorn git pandoc openssh-client rsync
+    apt-get install -y python-pip libcurl4-openssl-dev gcc libssl-dev curl gunicorn git pandoc openssh-client rsync
 
 RUN pip install --upgrade pip setuptools
 
