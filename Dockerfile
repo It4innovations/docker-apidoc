@@ -7,11 +7,10 @@ ENV LANG en_US.utf8
 
 RUN apt-get clean && \
     apt-get update -y && \
-    apt-get install -y python-pip libcurl4-openssl-dev gcc libssl-dev curl gunicorn git pandoc openssh-client rsync
+    apt-get install -y python-pip libssl-dev libcurl4-openssl-dev python-dev \
+                       mysql-client python-mysqldb git curl pandoc openssh-client rsync
 
 RUN pip install --upgrade pip setuptools
-
-COPY requirements.txt /tmp/
-RUN pip install --requirement /tmp/requirements.txt
+RUN pip install pycurl pyresttest jmespath gunicorn
 
 RUN useradd -lM coverage
