@@ -1,3 +1,3 @@
 # docker-apidoc
 
-Latest Ubuntu with Python Sphynx at al.
+Latest Debian with sphinx, gunicorn, ssh, rsync.
