@@ -7,8 +7,9 @@ ENV LANG en_US.utf8
 
 RUN apt-get clean && \
     apt-get update -y && \
-    apt-get install -y default-mysql-client git curl pandoc openssh-client rsync virtualenv \
-                       python-pip python-dev python3-dev libssl-dev libcurl4-openssl-dev
+    apt-get install -y default-mysql-client git curl pandoc openssh-client rsync \
+                       python-pip virtualenv python3-virtualenv python-dev python3-dev \
+                       libssl-dev libcurl4-openssl-dev
 
 RUN pip install --upgrade pip setuptools
 RUN pip install sphinx sphinxcontrib-httpdomain sphinxcontrib-websupport gunicorn
